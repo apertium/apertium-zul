@@ -13,7 +13,11 @@ Alphabet
  %<SI%_15%> %<SI%_17%>
 
 
- %[%+um%]:0  %[%+aba%]:0  ;
+ %[%+um%]:0  %[%+aba%]:0  
+ %[%+in%]:0  %[%+izin%]:0  
+
+
+;
 
 Sets 
 
@@ -26,6 +30,12 @@ Rules
 
 "Match prefixes +aba"
 %[%+aba%]:0 /<= _ (:*) %[%+um%]:0 ;
+
+"Match prefixes +in"
+%[%+in%]:0 /<=  _ (:*) %[%+izin%]:0 ; 
+
+"Match prefixes +izin"
+%[%+izin%]:0 /<= _ (:*) %[%+in%]:0 ;
 
 
 ! [+aba]ntu<n><SI_1-2>[+aba]<pl>:abantu
