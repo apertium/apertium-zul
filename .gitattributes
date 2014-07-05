@@ -1,5 +1,6 @@
 * text=auto !eol
 /Makefile -text
 /apertium-zul.zul.lexc -text
+/apertium-zul.zul.rlx -text
 /apertium-zul.zul.twoc -text
 /apertium-zul.zul.twol -text

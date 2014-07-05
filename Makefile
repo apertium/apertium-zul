@@ -7,5 +7,7 @@ all:
 
 	hfst-compose-intersect -1 zul.mor.hfst -2 zul.twoc.hfst | hfst-fst2fst -O -o zul.automorf.hfst
 
+	cg-comp apertium-zul.zul.rlx zul.rlx.bin
+
 clean:
-	rm *.hfst
+	rm *.hfst *.rlx.bin
