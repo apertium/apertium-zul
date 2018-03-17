@@ -4,3 +4,8 @@
 /apertium-zul.zul.rlx -text
 /apertium-zul.zul.twoc -text
 /apertium-zul.zul.twol -text
+*.dix linguist-language=XML linguist-detectable=true
+*.lrx linguist-language=XML linguist-detectable=true
+*.lsx linguist-language=XML linguist-detectable=true
+*.tsx linguist-language=XML linguist-detectable=true
+*.t[[:digit:]]x linguist-language=XML linguist-detectable=true
