@@ -1,0 +1,4 @@
+^ntu<n><SI_1-2><sg>$
+^ntu<n><SI_1-2><pl>$
+^dlovu<n><SI_9-10><sg>$
+^dlovu<n><SI_9-10><pl>$

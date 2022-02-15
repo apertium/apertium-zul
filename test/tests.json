@@ -1,0 +1,10 @@
+{
+    "analysis": {
+        "input": "analysis-input.txt",
+        "mode": "zul-disam"
+    },
+    "generation": {
+        "input": "generation-input.txt",
+        "mode": "zul-gener"
+    }
+}
