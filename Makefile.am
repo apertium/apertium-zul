@@ -12,7 +12,6 @@ TARGETS_COMMON =			\
 	$(LANG1).autogen.hfst		\
 	$(LANG1).autogen.bin		\
 	$(LANG1).autogen.att.gz		\
-	$(LANG1).autopgen.bin		\
 	$(LANG1).prob               \
 	$(LANG1).rlx.bin            \
 	$(LANG1).zhfst
@@ -69,9 +68,6 @@ $(LANG1).autogen.bin: $(LANG1).autogen.att.gz .deps/.d
 $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
 	zcat < $< > .deps/$(LANG1).automorf.att
 	lt-comp lr .deps/$(LANG1).automorf.att $@
-
-$(LANG1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
-	lt-comp lr $< $@
 
 ###############################################################################
 ## Debugging transducers (for testvoc)
@@ -145,7 +141,6 @@ EXTRA_DIST= \
 		$(BASENAME).$(LANG1).lexd	\
 		$(BASENAME).$(LANG1).twol	\
 		$(BASENAME).$(LANG1).rlx	\
-		$(BASENAME).post-$(LANG1).dix	\
 		$(LANG1).prob			\
 		modes.xml
 
@@ -163,7 +158,6 @@ apertium_zul_DATA=$(TARGETS_COMMON) \
 	$(BASENAME).$(LANG1).lexd	\
 	$(BASENAME).$(LANG1).twol	\
 	$(BASENAME).$(LANG1).rlx	\
-	$(BASENAME).post-$(LANG1).dix	\
 	$(LANG1).prob
 
 pkgconfigdir = $(prefix)/share/pkgconfig

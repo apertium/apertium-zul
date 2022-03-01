@@ -27,6 +27,7 @@
 ###############################################################################
 
 PATTERNS
+Conjunction
 Noun
 Punctuation
 
@@ -34,16 +35,19 @@ PATTERN Noun
 (:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c9-10]]
 
 LEXICON NounPrefix
-<SI_1-2><sg>:um{u}>[c1-2]
-<SI_1-2><pl>:ab{a}>[c1-2]
-<SI_9-10><sg>:i{n}>[c9-10]
-<SI_9-10><pl>:izi{n}[c9-10]
+<cl1-2><sg>:um{u}>[c1-2]
+<cl1-2><pl>:ab{a}>[c1-2]
+<cl9-10><sg>:i{n}>[c9-10]
+<cl9-10><pl>:izi{n}[c9-10]
 
 
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
 ###############################################################################
+
+LEXICON Conjunction
+ukuthi<cnjsub>:ukuthi
 
 LEXICON NounRoot
 ntu:ntu[c1-2] # "person"
