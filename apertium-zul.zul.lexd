@@ -30,6 +30,7 @@ PATTERNS
 Conjunction
 Noun
 Punctuation
+Adverb
 
 PATTERN Noun
 (:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c9-10]]
@@ -48,10 +49,90 @@ LEXICON NounPrefix
 
 LEXICON Conjunction
 ukuthi<cnjsub>:ukuthi
+uma<cnjsub>:uma
+ngoba<cnjsub>:ngoba
+lapho<cnjsub>:lapho
+ukuba<cnjsub>:ukuba
+khona<cnjsub>:khona
+futhi<cnjcoo>:futhi
+noma<cnjcoo>:noma
+kodwa<cnjcoo>:kodwa
+lapha<cnjsub>:lapha
+kanye<cnjsub>:kanye
+kanti<cnjsub>:kanti
+
+LEXICON Adverb
+kahle<adv>:kahle
 
 LEXICON NounRoot
 ntu:ntu[c1-2] # "person"
+fundi:fundi[c1-2] # "student"
 dlovu:dlovu[c9-10] # "elephant"
+ja:ja[c9-10] # "dog"
+dlulamithi:dlulamithi[c9-10] # "giraffe"
+kinga:kinga[c9-10] # "problem"
+amba:amba[c1-2]
+amdunge:amdunge[c1-2]
+bokodwe:bokodwe[c1-2]
+dadl:dadl[c1-2]
+fana:fana[c1-2]
+fantu:fantu[c1-2]
+fany:fany[c1-2]
+fazi:fazi[c1-2]
+f:f[c1-2]
+fokaz:fokaz[c1-2]
+fo:fo[c1-2]
+fowethu:fowethu[c1-2]
+gq:gq[c1-2]
+hlobo:hlobo[c1-2]
+isebenzi:isebenzi[c1-2]
+kami:kami[c1-2]
+ka:ka[c1-2]
+khaladi:khaladi[c1-2]
+khaya:khaya[c1-2]
+khi:khi[c1-2]
+khize:khize[c1-2]
+khusu:khusu[c1-2]
+khwenyane:khwenyane[c1-2]
+komo:komo[c1-2]
+lamu:lamu[c1-2]
+lungu:lungu[c1-2]
+mamba:mamba[c1-2]
+ncube:ncube[c1-2]
+ne:ne[c1-2]
+ngane:ngane[c1-2]
+ngani:ngani[c1-2]
+ngan:ngan[c1-2]
+nini:nini[c1-2]
+ntana:ntana[c1-2]
+ntan:ntan[c1-2]
+nta:nta[c1-2]
+ntu:ntu[c1-2]
+ntwana:ntwana[c1-2]
+ntw:ntw[c1-2]
+numzane:numzane[c1-2]
+numz:numz[c1-2]
+nu:nu[c1-2]
+nyango:nyango[c1-2]
+nye:nye[c1-2]
+pontshi:pontshi[c1-2]
+qhense:qhense[c1-2]
+qoka:qoka[c1-2]
+sel:sel[c1-2]
+shengu:shengu[c1-2]
+shika:shika[c1-2]
+siza:siza[c1-2]
+thembu:thembu[c1-2]
+thish:thish[c1-2]
+tungwa:tungwa[c1-2]
+vondlw:vondlw[c1-2]
+vula:vula[c1-2]
+yeni:yeni[c1-2]
+yise:yise[c1-2]
+zimb:zimb[c1-2]
+zi:zi[c1-2]
+zobe:zobe[c1-2]
+zumbe:zumbe[c1-2]
 
 
 LEXICON Punctuation
