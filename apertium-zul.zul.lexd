@@ -43,10 +43,12 @@ LEXICON NounPrefix
 <cl9-10><pl>:izi{n}[c9-10]
 
 PATTERN Verb
-VerbRoot: [<v>:] VerbPrefixes :VerbRoot
+# TODO: Use ObjConcord?(1) syntax when we have that
+:SubjConcord TensedVerb SubjConcord:
+:SubjConcord :ObjConcord TensedVerb SubjConcord: ObjConcord:
 
-PATTERN VerbPrefixes
-SubjConcord ObjConcord?
+PATTERN TensedVerb
+:Tense(1) VerbRoot [<v>:] Tense(1): :Tense(2)
 
 LEXICON SubjConcord
 <s_p1><s_sg>:ngi>
@@ -97,6 +99,10 @@ LEXICON ObjConcord
 <o_cl14><o_sg>:bu>
 <o_cl15><o_sg>:ku>
 <o_cl17><o_sg>:ku>
+
+LEXICON Tense(2)
+<pres>: :>a
+<pres><neg>: :>i
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
