@@ -43,9 +43,7 @@ LEXICON NounPrefix
 <cl9-10><pl>:izi{n}[c9-10]
 
 PATTERN Verb
-# TODO: Use ObjConcord?(1) syntax when we have that
-:SubjConcord TensedVerb SubjConcord:
-:SubjConcord :ObjConcord TensedVerb SubjConcord: ObjConcord:
+SubjConcord ObjConcord TensedVerb
 
 PATTERN TensedVerb
 :Tense(1) VerbRoot [<v>:] Tense(1): :Tense(2)

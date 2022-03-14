@@ -1,0 +1,58 @@
+PATTERNS
+MaybeSubjStem WB
+ObjStem WB
+
+# lsx-comp fails if it can't find all 3 word-boundary symbols
+# so insert the ones we don't use
+[<$_><$->:<$_><$->] # @HACK
+
+LEXICON WB
+<$>
+
+PATTERN ObjStem
+:ObjClass :ObjNum FixedStem ObjClass: ObjNum:
+
+PATTERN MaybeSubjStem
+ObjStem
+:SubjClass :SubjNum (ObjStem|FixedStem) SubjClass: SubjNum:
+
+PATTERN FixedStem
+[<ANY_CHAR>]+ [<ANY_TAG>]+
+
+LEXICON SubjClass
+<s_p1>
+<s_p2>
+<s_p3>
+<s_cl1-2>
+<s_cl1-2a>
+<s_cl3-4>
+<s_cl5-6>
+<s_cl7-8>
+<s_cl9-10>
+<s_cl11-10>
+<s_cl14>
+<s_cl15>
+<s_cl17>
+
+LEXICON SubjNum
+<s_sg>
+<s_pl>
+
+LEXICON ObjClass
+<o_p1>
+<o_p2>
+<o_p3>
+<o_cl1-2>
+<o_cl1-2a>
+<o_cl3-4>
+<o_cl5-6>
+<o_cl7-8>
+<o_cl9-10>
+<o_cl11-10>
+<o_cl14>
+<o_cl15>
+<o_cl17>
+
+LEXICON ObjNum
+<o_sg>
+<o_pl>

@@ -12,9 +12,10 @@ TARGETS_COMMON =			\
 	$(LANG1).autogen.hfst		\
 	$(LANG1).autogen.bin		\
 	$(LANG1).autogen.att.gz		\
-	$(LANG1).prob               \
 	$(LANG1).rlx.bin            \
-	$(LANG1).zhfst
+	$(LANG1).zhfst				\
+	$(LANG1).prefix.bin			\
+	$(LANG1).unprefix.bin
 
 # This include defines goals for install-modes, .deps/.d, autobil.prefixes and .mode files:
 @ap_include@
@@ -68,6 +69,15 @@ $(LANG1).autogen.bin: $(LANG1).autogen.att.gz .deps/.d
 $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
 	zcat < $< > .deps/$(LANG1).automorf.att
 	lt-comp lr .deps/$(LANG1).automorf.att $@
+
+.deps/$(LANG1).prefix.att: $(BASENAME).$(LANG1)-tags.lexd .deps/.d
+	lexd $< $@
+
+$(LANG1).prefix.bin: .deps/$(LANG1).prefix.att
+	lt-comp -S lr $< $@
+
+$(LANG1).unprefix.bin: .deps/$(LANG1).prefix.att
+	lt-comp -S rl $< $@
 
 ###############################################################################
 ## Debugging transducers (for testvoc)
