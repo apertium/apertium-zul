@@ -34,7 +34,7 @@ Adverb
 Verb
 
 PATTERN Noun
-(:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c9-10]]
+(:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
 
 LEXICON NounPrefix
 <cl1-2><sg>:um{u}>[c1-2]
@@ -52,8 +52,11 @@ LEXICON NounPrefix
 <cl15><sg>:uku>[c15]
 <cl17><sg>:uku>[c17]
 
+PATTERN Verb
+TensedVerb
+
 PATTERN TensedVerb
-:Tense(1) SubjConcors ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(2)
+:Tense(1) SubjConcord ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(2)
 
 LEXICON SubjConcord
 <s_p1><s_sg>:ngi>
@@ -105,9 +108,9 @@ LEXICON ObjConcord
 <o_cl15><o_sg>:ku>
 <o_cl17><o_sg>:ku>
 
-LEXICON Tense(1)
-<pres><neg>: a<
-<past><neg>: a<
+LEXICON Tense(2)
+<pres><neg>: a>
+<past><neg>: a>
 
 LEXICON Tense(2)
 <pres>: :>a
