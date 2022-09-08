@@ -39,14 +39,21 @@ PATTERN Noun
 LEXICON NounPrefix
 <cl1-2><sg>:um{u}>[c1-2]
 <cl1-2><pl>:ab{a}>[c1-2]
+<cl3-4><sg>:um{u}>[c3-4]
+<cl3-4><pl>:imi>[c3-4]
+<cl5-6><sg>:i>[c5-6]
+<cl5-6><pl>:ama>[c5-6]
+<cl7-8><sg>:isi>[c7-8]
+<cl7-8><pl>:izi>[c7-8]
 <cl9-10><sg>:i{n}>[c9-10]
 <cl9-10><pl>:izi{n}[c9-10]
-
-PATTERN Verb
-SubjConcord ObjConcord TensedVerb
+<cl11><sg>:u>[c11]
+<cl14><sg>:ubu>[c14]
+<cl15><sg>:uku>[c15]
+<cl17><sg>:uku>[c17]
 
 PATTERN TensedVerb
-:Tense(1) VerbRoot [<v>:] Tense(1): :Tense(2)
+:Tense(1) SubjConcors ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(2)
 
 LEXICON SubjConcord
 <s_p1><s_sg>:ngi>
@@ -98,9 +105,16 @@ LEXICON ObjConcord
 <o_cl15><o_sg>:ku>
 <o_cl17><o_sg>:ku>
 
+LEXICON Tense(1)
+<pres><neg>: a<
+<past><neg>: a<
+
 LEXICON Tense(2)
 <pres>: :>a
 <pres><neg>: :>i
+<past>: :>{il}e
+<past><neg>: :>anga
+<past_remote>: :>a
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
