@@ -56,7 +56,7 @@ PATTERN Verb
 TensedVerb
 
 PATTERN TensedVerb
-:Tense(1) SubjConcord ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(2)
+:Tense(1) SubjConcord Mood? ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(2)
 
 LEXICON SubjConcord
 <s_p1><s_sg>:ngi>
@@ -109,8 +109,12 @@ LEXICON ObjConcord
 <o_cl17><o_sg>:ku>
 
 LEXICON Tense(2)
-<pres><neg>: a>
-<past><neg>: a>
+<pres><neg> :a>
+<past><neg> :a>
+<past><cont> :be>
+<past><cont><neg> :be>
+<past><perf> :be>
+<past><perf><neg> :be>
 
 LEXICON Tense(2)
 <pres>: :>a
@@ -118,6 +122,19 @@ LEXICON Tense(2)
 <past>: :>{il}e
 <past><neg>: :>anga
 <past_remote>: :>a
+<participle><neg>: :>i
+<pres><subjn>: :>e
+<past><cont><neg>: :>i
+<past><perf>: :>e
+<past><perf><neg>: :>nga
+
+LEXICON Mood
+<pot>:nga>
+<foc>:ya>
+<participle><neg>:nga>
+<subjn><neg>:nga>
+<past><cont><neg>:nga>
+<fut>:zo>
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
