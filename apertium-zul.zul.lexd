@@ -4,6 +4,8 @@
 # <n>      # Noun
 # <v>      # Verb
 # <adj>    # Adjective
+# <prn>    # Pronoun
+# <det>    # Determiner
 
 # <sent>   # Sentence-ending punctuation
 # <guio>   # Hyphen
@@ -32,6 +34,9 @@ Noun
 Punctuation
 Adverb
 Verb
+Pronoun
+Adjective
+Determiner
 
 PATTERN Noun
 (:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
@@ -51,6 +56,52 @@ LEXICON NounPrefix
 <cl14><sg>:ubu>[c14]
 <cl15><sg>:uku>[c15]
 <cl17><sg>:uku>[c17]
+
+PATTERN Adjective
+AdjPrefix AdjRoot
+
+LEXICON AdjPrefix
+<cl1-2><sg>:omu>
+<cl1-2><pl>:aba>
+<cl3-4><sg>:omu>
+<cl3-4><pl>:emi>
+<cl5-6><sg>:eli>
+<cl5-6><pl>:ama>
+<cl7-8><sg>:esi>
+<cl7-8><pl>:ezi{n}>
+<cl9-10><sg>:en>
+<cl9-10><pl>:ezi{n}>
+<cl11><sg>:olu>
+<cl14><sg>:obu>
+<cl15><sg>:oku>
+<cl17><sg>:oku>
+
+PATTERN Determiner
+Possessive
+
+PATTERN Possessive
+ObjAgr PosRoot 
+
+LEXICON ObjAgr
+<o_p3><o_sg>:wa>
+<o_p3><o_pl>:ba>
+<o_cl1-2><o_sg>:wa>
+<o_cl1-2><o_pl>:ba>
+<o_cl1-2a><o_sg>:wa>
+<o_cl1-2a><o_pl>:ba>
+<o_cl3-4><o_sg>:wa>
+<o_cl3-4><o_pl>:ya>
+<o_cl5-6><o_sg>:la>
+<o_cl5-6><o_pl>:a>
+<o_cl7-8><o_sg>:sa>
+<o_cl7-8><o_pl>:za>
+<o_cl9-10><o_sg>:ya>
+<o_cl9-10><o_pl>:za>
+<o_cl11-10><o_sg>:lwa>
+<o_cl11-10><o_pl>:za>
+<o_cl14><o_sg>:ba>
+<o_cl15><o_sg>:kwa>
+<o_cl17><o_sg>:kwa>
 
 PATTERN Verb
 TensedVerb
@@ -136,6 +187,39 @@ LEXICON Mood
 <past><cont><neg>:nga>
 <fut>:zo>
 
+PATTERN Pronoun
+PersPronoun
+
+PATTERN PersPronoun
+PersPro Demo
+
+LEXICON PersPro
+<pers><1sg>:mi>
+<pers><1pl>:thi>
+<pers><2sg>:we>
+<pers><2pl>:ni>
+<pers><3sg>:ye>
+<pers><3pl>:bo>
+<pers><c1>:ye>
+<pers><c2>:bo>
+<pers><c1a>:ye>
+<pers><c2a>:bo>
+<pers><c3>:wo>
+<pers><c4>:yo>
+<pers><c5>:lo>
+<pers><c6>:wo>
+<pers><c7>:so>
+<pers><c8>:zo>
+<pers><c9>:yo>
+<pers><c10>:zo>
+<pers><c11>:lo>
+<pers><c14>:bo>
+<pers><c15>:kho>
+<pers><c17>:kho>
+
+LEXICON Demo
+<demo_all>:>na
+
 ###############################################################################
 ###                          L E X I C O N                                  ###
 ###############################################################################
@@ -153,6 +237,9 @@ kodwa<cnjcoo>:kodwa
 lapha<cnjsub>:lapha
 kanye<cnjsub>:kanye
 kanti<cnjsub>:kanti
+ke<cnjsub>:ke
+njengoba<cnjcoo>:njengoba
+bese<cnjcoo>:bese
 
 LEXICON Adverb
 kahle<adv>:kahle
@@ -160,6 +247,49 @@ nje<adv>:nje
 ngakho-ke<adv>:ngakho-ke
 ngakho-ke<adv>:ngakhoke # Dir/LR
 manje<adv>:manje
+kakhulu<adv>:kakhulu
+phansi<adv>:phansi
+ngaphansi<adv>:ngaphansi
+phela<adv>:phela
+sengathi<adv>:sengathi
+njalo<adv>:njalo
+
+LEXICON PosRoot
+mi<s_p1><s_sg>:mi
+ithu<s_p1><s_pl>:ithu
+kho<s_p2><s_sg>:kho
+inu<s_p2><s_pl>:inu
+khe<s_p3><s_sg>:khe
+bo<s_p3><s_pl>:bo
+khe<s_cl1-2><s_sg>:khe
+bo<s_cl1-2><s_pl>:bo
+khe<s_cl1-2a><s_sg>:khe
+bo<s_cl1-2a><s_pl>:bo
+wo<s_cl3-4><s_sg>:wo
+yo<s_cl3-4><s_pl>:yo
+lo<s_cl5-6><s_sg>:lo
+wo<s_cl5-6><s_pl>:wo
+so<s_cl7-8><s_sg>:so
+zo<s_cl7-8><s_pl>:zo
+yo<s_cl9-10><s_sg>:yo
+zo<s_cl9-10><s_pl>:zo
+lo<s_cl11-10><s_sg>:lo
+zo<s_cl11-10><s_pl>:zo
+bo<s_cl14><s_sg>:bo
+kho<s_cl15><s_sg>:kho
+kho<s_cl17><s_sg>:kho
+
+LEXICON AdjRoot
+hle # "good"
+bi # "bad"
+khulu # "big"
+ncane # "small"
+de # "tall/long"
+fushane # "short"
+seduze # "near"
+ningi # "many"
+dala # "old"
+ningana # "quite a few"
 
 LEXICON NounRoot
 akhe[c15]
