@@ -36,7 +36,8 @@ Adverb
 Verb
 Pronoun
 Adjective
-Determiner
+Quant
+Possessive
 
 PATTERN Noun
 (:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
@@ -76,11 +77,45 @@ LEXICON AdjPrefix
 <cl15><sg>:oku>
 <cl17><sg>:oku>
 
-PATTERN Determiner
-Possessive
+#PATTERN Determiner
+#Possessive
+#Quant
+
+PATTERN Adverb
+AdvPrefix AdjRoot [<adv>:]
+
+LEXICON AdvPrefix
+:ka>
 
 PATTERN Possessive
 ObjAgr PosRoot 
+
+PATTERN Quant
+NAgr QuantRoot
+
+LEXICON NAgr
+<pers><1sg>:nge>
+<pers><1pl>:so>
+<pers><2sg>:we>
+<pers><2pl>:no>
+<pers><3sg>:ye>
+<pers><3pl>:bo>
+<pers><c1>:ye>
+<pers><c2>:bo>
+<pers><c1a>:ye>
+<pers><c2a>:bo>
+<pers><c3>:wo>
+<pers><c4>:yo>
+<pers><c5>:lo>
+<pers><c6>:wo>
+<pers><c7>:so>
+<pers><c8>:zo>
+<pers><c9>:yo>
+<pers><c10>:zo>
+<pers><c11>:lo>
+<pers><c14>:bo>
+<pers><c15>:ko>
+<pers><c17>:ko>
 
 LEXICON ObjAgr
 <o_p3><o_sg>:wa>
@@ -242,17 +277,21 @@ njengoba<cnjcoo>:njengoba
 bese<cnjcoo>:bese
 
 LEXICON Adverb
-kahle<adv>:kahle
+#kahle<adv>:kahle
 nje<adv>:nje
 ngakho-ke<adv>:ngakho-ke
 ngakho-ke<adv>:ngakhoke # Dir/LR
 manje<adv>:manje
-kakhulu<adv>:kakhulu
+#kakhulu<adv>:kakhulu
 phansi<adv>:phansi
 ngaphansi<adv>:ngaphansi
 phela<adv>:phela
 sengathi<adv>:sengathi
 njalo<adv>:njalo
+
+LEXICON QuantRoot
+nke
+dwa
 
 LEXICON PosRoot
 mi<s_p1><s_sg>:mi
@@ -290,6 +329,8 @@ seduze # "near"
 ningi # "many"
 dala # "old"
 ningana # "quite a few"
+
+#ALIAS AdjRoot AdvRoot
 
 LEXICON NounRoot
 akhe[c15]
