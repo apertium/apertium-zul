@@ -2,13 +2,18 @@ Alphabet
 
  a b c d e f g h i j k l m n o p q r s t u v w x y z 
 
- %{u%}:0 %{a%}:a %{n%}:n 
+ i:e u:o
 
+ %{u%}:0 %{a%}:a %{n%}:n 
+ %{u%}:u
+ %{u%}:w
  %>:0 ; 
 
 Sets 
 
 Vow = a e i o u ; 
+
+CoalVow = a i o u ;
 
 Rules 
 
@@ -23,3 +28,16 @@ Rules
 
 "assimilation"
 %{n%}:m <=> _ %>: :p ; 
+
+"vowel merge part 1"
+a:0 <=> _ %>: CoalVow: ;
+
+"vowel merge part 2"
+vx:vy <=> a:0 %>: _ ;
+	where vx in ( i u )
+	      vy in ( e o )
+        matched ;
+
+"U turns into w before the vowel a"
+%{u%}:w <=> _ %>: :a ;
+

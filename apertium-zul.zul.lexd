@@ -32,15 +32,19 @@ PATTERNS
 Conjunction
 Noun
 Punctuation
-Adverb
 Verb
 Pronoun
+Adverb
+IrrAdverb
 Adjective
 Quant
 Possessive
 
 PATTERN Noun
-(:NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
+(:CConj? :NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
+
+LEXICON CConj
+<cconj>:na>
 
 LEXICON NounPrefix
 <cl1-2><sg>:um{u}>[c1-2]
@@ -83,6 +87,9 @@ LEXICON AdjPrefix
 
 PATTERN Adverb
 AdvPrefix AdjRoot [<adv>:]
+
+PATTERN IrrAdverb
+IrrAdverb
 
 LEXICON AdvPrefix
 :ka>
@@ -142,20 +149,20 @@ PATTERN Verb
 TensedVerb
 
 PATTERN TensedVerb
-:Tense(1) SubjConcord Mood? ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(2)
+:Tense(1) SubjConcord Tense(2) Mood? ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(3)
 
 LEXICON SubjConcord
 <s_p1><s_sg>:ngi>
 <s_p1><s_pl>:si>
-<s_p2><s_sg>:u>
+<s_p2><s_sg>:{u}>
 <s_p2><s_pl>:ni>
-<s_p3><s_sg>:u>
+<s_p3><s_sg>:{u}>
 <s_p3><s_pl>:ba>
-<s_cl1-2><s_sg>:u>
+<s_cl1-2><s_sg>:{u}>
 <s_cl1-2><s_pl>:ba>
-<s_cl1-2a><s_sg>:u>
+<s_cl1-2a><s_sg>:{u}>
 <s_cl1-2a><s_pl>:o>
-<s_cl3-4><s_sg>:u>
+<s_cl3-4><s_sg>:{u}>
 <s_cl3-4><s_pl>:i>
 <s_cl5-6><s_sg>:li>
 <s_cl5-6><s_pl>:a>
@@ -163,11 +170,11 @@ LEXICON SubjConcord
 <s_cl7-8><s_pl>:zi>
 <s_cl9-10><s_sg>:i>
 <s_cl9-10><s_pl>:zi>
-<s_cl11-10><s_sg>:lu>
+<s_cl11-10><s_sg>:l{u}>
 <s_cl11-10><s_pl>:zi>
 <s_cl14><s_sg>:bu>
-<s_cl15><s_sg>:ku>
-<s_cl17><s_sg>:ku>
+<s_cl15><s_sg>:k{u}>
+<s_cl17><s_sg>:k{u}>
 
 LEXICON ObjConcord
 <o_p1><o_sg>:ngi>
@@ -194,25 +201,20 @@ LEXICON ObjConcord
 <o_cl15><o_sg>:ku>
 <o_cl17><o_sg>:ku>
 
-LEXICON Tense(2)
-<pres><neg> :a>
-<past><neg> :a>
-<past><cont> :be>
-<past><cont><neg> :be>
-<past><perf> :be>
-<past><perf><neg> :be>
-
-LEXICON Tense(2)
-<pres>: :>a
-<pres><neg>: :>i
-<past>: :>{il}e
-<past><neg>: :>anga
-<past_remote>: :>a
-<participle><neg>: :>i
-<pres><subjn>: :>e
-<past><cont><neg>: :>i
-<past><perf>: :>e
-<past><perf><neg>: :>nga
+LEXICON Tense(3)
+<pres><neg>:a> : :>i
+<past><neg>:a> : :>anga
+<past><cont>:be> : :>a
+<past><cont><neg>:be> : :>i
+<past><perf>:be> : :>e
+<past><perf><neg>:be> : :>anga
+<past>: : :>e
+<past>: : :>ile #Dir/LR
+<pres>: : :>a
+<pres><neg>: : :>i
+<rm_past><cont>:nga> : :>a
+<rm_past><perf>:nga> : :>e
+<rm_past>: :a> :>a
 
 LEXICON Mood
 <pot>:nga>
@@ -276,7 +278,7 @@ ke<cnjsub>:ke
 njengoba<cnjcoo>:njengoba
 bese<cnjcoo>:bese
 
-LEXICON Adverb
+LEXICON IrrAdverb
 #kahle<adv>:kahle
 nje<adv>:nje
 ngakho-ke<adv>:ngakho-ke
@@ -288,6 +290,7 @@ ngaphansi<adv>:ngaphansi
 phela<adv>:phela
 sengathi<adv>:sengathi
 njalo<adv>:njalo
+kanjani<adv>:kanjani
 
 LEXICON QuantRoot
 nke
@@ -702,7 +705,7 @@ hlobo[c5-6]
 hlobo[c7-8]
 hlobo[c9-10]
 hlobo:hlobo[c1-2]
-hlo[c5-6]
+ihlo[c5-6]
 hloko[c7-8]
 hloko[c9-10]
 hlola[c3-4]
@@ -1968,6 +1971,7 @@ kholw
 khomb
 khombis
 khong
+khon
 khonj
 khonkoth
 khonz
