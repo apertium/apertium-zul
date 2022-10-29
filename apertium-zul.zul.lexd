@@ -39,6 +39,8 @@ IrrAdverb
 Adjective
 Quant
 Possessive
+Copula
+Location
 
 PATTERN Noun
 (:CConj? :NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
@@ -61,6 +63,20 @@ LEXICON NounPrefix
 <cl14><sg>:ubu>[c14]
 <cl15><sg>:uku>[c15]
 <cl17><sg>:uku>[c17]
+
+PATTERN Copula
+Cop Noun
+
+LEXICON Cop
+<cop>:y>
+<cop>:ng> 
+
+PATTERN Location
+Loc Noun
+
+LEXICON Loc
+<loc>:kwa>
+<loc>:e>
 
 PATTERN Adjective
 AdjPrefix AdjRoot
@@ -86,13 +102,14 @@ LEXICON AdjPrefix
 #Quant
 
 PATTERN Adverb
-AdvPrefix AdjRoot [<adv>:]
+AdvPrefix AdjRoot? AdvRoot? Noun? [<adv>:]
 
 PATTERN IrrAdverb
 IrrAdverb
 
 LEXICON AdvPrefix
 :ka>
+:nga>
 
 PATTERN Possessive
 ObjAgr PosRoot 
@@ -333,10 +350,14 @@ ningi # "many"
 dala # "old"
 ningana # "quite a few"
 
+LEXICON AdvRoot
+phansi #below
+
 #ALIAS AdjRoot AdvRoot
 
 LEXICON NounRoot
 akhe[c15]
+Afrika[c5-6]
 alu[c7-8]
 alukaz[c7-8]
 alukazi[c7-8]
@@ -567,6 +588,8 @@ fudumezi[c7-8]
 fula[c3-4]
 fulawa[c3-4]
 ful[c3-4]
+funda[c7-8]
+fundazwe[c7-8]
 fundi:fundi[c1-2] # "student"
 futha[c5-6]
 gaba[c7-8]
@@ -726,6 +749,7 @@ hosh[c7-8]
 hotela[c5-6]
 huntshu[c11-10]
 isebenzi:isebenzi[c1-2]
+ingizimu[c9-10]
 ja:ja[c9-10] # "dog"
 jakobe[c1-2]
 james[c1-2]
