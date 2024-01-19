@@ -33,7 +33,8 @@ Conjunction
 Noun
 Punctuation
 Verb
-Pronoun
+DemPronoun
+PersPronoun
 Adverb
 IrrAdverb
 Adjective
@@ -102,10 +103,10 @@ LEXICON AdjPrefix
 #Quant
 
 PATTERN Adverb
-AdvPrefix AdjRoot? AdvRoot? Noun? [<adv>:]
+AdvPrefix (PersPro|AdjRoot|AdvRoot|Noun) [<adv>:]
 
-PATTERN IrrAdverb
-IrrAdverb
+#PATTERN IrrAdverb
+#IrrAdverb
 
 LEXICON AdvPrefix
 :ka>
@@ -241,8 +242,61 @@ LEXICON Mood
 <past><cont><neg>:nga>
 <fut>:zo>
 
-PATTERN Pronoun
-PersPronoun
+PATTERN DemPronoun
+ProAgr Distance
+
+LEXICON ProAgr
+<pers><c1>:lo>
+<pers><c1a>:lo>
+<pers><c2>:la>
+<pers><c2a>:la>
+<pers><c3>:lo>
+<pers><c4>:le>
+<pers><c5>:le>
+<pers><c6>:la>
+<pers><c7>:le>
+<pers><c8>:le>
+<pers><c9>:le>
+<pers><c10>:le>
+<pers><c11>:lo>
+<pers><c14>:lo>
+<pers><c15>:lo>
+<pers><c17>:lo>
+
+LEXICON Distance
+<dist><0><c1>: #"this"
+<dist><0><c1a>: #"this"
+<dist><0><c2>:>ba #"this"
+<dist><0><c2a>:>ba #"this"
+<dist><0><c3>: #"this"
+<dist><0><c4>: #"this"
+<dist><0><c5>:>li #"this"
+<dist><0><c6>: #"this"
+<dist><0><c7>:>si #"this"
+<dist><0><c8>:>zi #"this"
+<dist><0><c9>: #"this"
+<dist><0><c10>:>zi #"this"
+<dist><0><c11>:>lu #"this"
+<dist><0><c14>:>bu #"this"
+<dist><0><c15>:>khu #"this"
+<dist><0><c17>:>khu #"this"
+<dist><1><c1>:>wo #"that"
+<dist><1><c1a>:>wo #"that"
+<dist><1><c2>:>bo #"that"
+<dist><1><c2a>:>bo #"that"
+<dist><1><c3>:>wo #"that"
+<dist><1><c4>:>yo #"that"
+<dist><1><c5>:>lo #"that"
+<dist><1><c6>:>wo #"that"
+<dist><1><c7>:>so #"that"
+<dist><1><c8>:>zo #"that"
+<dist><1><c9>:>yo #"that"
+<dist><1><c10>:>zo #"that"
+<dist><1><c11>:>lo #"that"
+<dist><1><c14>:>bo #"that"
+<dist><1><c15>:>kho #"that"
+<dist><1><c17>:>kho #"that"
+
 
 PATTERN PersPronoun
 PersPro Demo

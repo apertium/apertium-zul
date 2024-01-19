@@ -20,8 +20,8 @@ CoalVow = a i o u ;
 Loc = e i o u ;
 
 Rules 
-"M turns into n before a nasal glide cluster"
-m%{u%}:0 <=> _ %> :n :y ;
+!"M turns into n before a nasal glide cluster"
+!m%{u%}:0 <=> _ %> :n :y ;"
 
 "U turns into w before the vowel a"
 %{u%}:w <=> _ %>: :a ;
@@ -29,28 +29,28 @@ m%{u%}:0 <=> _ %> :n :y ;
 !"two consecutive n characters condense into one"
 !nn:n <=> : ;
 
-"umu- replaces um- before monosyllabic stems"
-%{u%}:u <=> _ %>:  Cons+: Vow: # ; 
+!"umu- replaces um- before monosyllabic stems"
+!%{u%}:u <=> _ %>:  Cons+: Vow: # ; 
 
-"ab- replaces aba- before stems with a vowel"
-%{a%}:0 <=> _ %>: :Vow ; 
+!"ab- replaces aba- before stems with a vowel"
+!%{a%}:0 <=> _ %>: :Vow ; 
 
-"delete n before m"
-%{n%}:0 <=> _ %>: :m ; 
+!"delete n before m"
+!%{n%}:0 <=> _ %>: :m ; 
 
-"assimilation"
-%{n%}:m <=> _ %>: :p ; 
+!"assimilation"
+!%{n%}:m <=> _ %>: :p ; 
 
-"Coalescence the a before a vowel is deleted"
-a:0 <=> _ %>: CoalVow: ;
+!"Coalescence the a before a vowel is deleted"
+!a:0 <=> _ %>: CoalVow: ;
 
-"Coalescence 2 the remaining i or u vowel raises or lowers after a is deleted"
-vx:vy <=> a:0 %>: _ ;
-	where vx in ( i u )
-	      vy in ( e o )
-        matched 
-;
+!"Coalescence 2 the remaining i or u vowel raises or lowers after a is deleted"
+!vx:vy <=> a:0 %>: _ ;
+!	where vx in ( i u )
+!	      vy in ( e o )
+!        matched 
+!;
 
-"the vowel following an e is deleted"
-Vx:0 <=>  e: %>: _ ;
-	where Vx in ( i o u ) ;
+!"the vowel following an e is deleted"
+!Vx:0 <=>  e: %>: _ ;
+!	where Vx in ( i o u ) ;
