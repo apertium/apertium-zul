@@ -90,7 +90,7 @@ LEXICON AdjPrefix
 <cl5-6><sg>:eli>
 <cl5-6><pl>:ama>
 <cl7-8><sg>:esi>
-<cl7-8><pl>:ezi{n}>
+<cl-8><pl>:ezi{n}>
 <cl9-10><sg>:en>
 <cl9-10><pl>:ezi{n}>
 <cl11><sg>:olu>
@@ -103,7 +103,7 @@ LEXICON AdjPrefix
 #Quant
 
 PATTERN Adverb
-AdvPrefix (PersPro|AdjRoot|AdvRoot|Noun) [<adv>:]
+(AdvPrefix (PersPro|AdjRoot|Noun)) | (AdvRoot) [<adv>:]
 
 #PATTERN IrrAdverb
 #IrrAdverb
@@ -111,6 +111,7 @@ AdvPrefix (PersPro|AdjRoot|AdvRoot|Noun) [<adv>:]
 LEXICON AdvPrefix
 :ka>
 :nga>
+:na>
 
 PATTERN Possessive
 ObjAgr PosRoot 
@@ -143,25 +144,24 @@ LEXICON NAgr
 <pers><c17>:ko>
 
 LEXICON ObjAgr
-<o_p3><o_sg>:wa>
-<o_p3><o_pl>:ba>
-<o_cl1-2><o_sg>:wa>
-<o_cl1-2><o_pl>:ba>
-<o_cl1-2a><o_sg>:wa>
-<o_cl1-2a><o_pl>:ba>
-<o_cl3-4><o_sg>:wa>
-<o_cl3-4><o_pl>:ya>
-<o_cl5-6><o_sg>:la>
-<o_cl5-6><o_pl>:a>
-<o_cl7-8><o_sg>:sa>
-<o_cl7-8><o_pl>:za>
-<o_cl9-10><o_sg>:ya>
-<o_cl9-10><o_pl>:za>
-<o_cl11-10><o_sg>:lwa>
-<o_cl11-10><o_pl>:za>
-<o_cl14><o_sg>:ba>
-<o_cl15><o_sg>:kwa>
-<o_cl17><o_sg>:kwa>
+<osg_p3>:wa>
+<opl_p3>:ba>
+<osg_c1>:wa>
+<opl_c2>:ba>
+<osg_c1a>:wa>
+<opl_c2a>:ba>
+<osg_c3>:wa>
+<opl_c4>:ya>
+<osg_c5>:la>
+<opl_c6>:a>
+<osg_c7>:sa>
+<opl_c8>:za>
+<osg_c9>:ya>
+<opl_c10>:za>
+<osg_c11>:lwa>
+<osg_c14>:ba>
+<opl_c15>:kwa>
+<osg_c17>:kwa>
 
 PATTERN Verb
 TensedVerb
@@ -170,54 +170,52 @@ PATTERN TensedVerb
 :Tense(1) SubjConcord Tense(2) Mood? ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(3)
 
 LEXICON SubjConcord
-<s_p1><s_sg>:ngi>
-<s_p1><s_pl>:si>
-<s_p2><s_sg>:{u}>
-<s_p2><s_pl>:ni>
-<s_p3><s_sg>:{u}>
-<s_p3><s_pl>:ba>
-<s_cl1-2><s_sg>:{u}>
-<s_cl1-2><s_pl>:ba>
-<s_cl1-2a><s_sg>:{u}>
-<s_cl1-2a><s_pl>:o>
-<s_cl3-4><s_sg>:{u}>
-<s_cl3-4><s_pl>:i>
-<s_cl5-6><s_sg>:li>
-<s_cl5-6><s_pl>:a>
-<s_cl7-8><s_sg>:si>
-<s_cl7-8><s_pl>:zi>
-<s_cl9-10><s_sg>:i>
-<s_cl9-10><s_pl>:zi>
-<s_cl11-10><s_sg>:l{u}>
-<s_cl11-10><s_pl>:zi>
-<s_cl14><s_sg>:bu>
-<s_cl15><s_sg>:k{u}>
-<s_cl17><s_sg>:k{u}>
+<subj><1sg>:ngi>
+<subj><1pl>:si>
+<subj><2sg>:{w}u>
+<subj><2pl>:ni>
+<subj><3sg>:{w}{u}>
+<subj><3pl>:ba>
+<subj><c1>:{k}{u}>
+<subj><c2>:ba>
+<subj><c1a>:{k}{u}>
+<subj><c2a>:o>
+<subj><c3>:{w}u>
+<subj><c4>:{y}i>
+<subj><c5>:li>
+<subj><c6>:a>
+<subj><c7>:si>
+<subj><c8>:zi>
+<subj><c9>:{y}i>
+<subj><c10>:zi>
+<subj><c11>:lu>
+<subj><c14>:bu>
+<subj><c15>:k{u}>
+<subj><c17>:k{u}>
 
 LEXICON ObjConcord
-<o_p1><o_sg>:ngi>
-<o_p1><o_pl>:si>
-<o_p2><o_sg>:ku>
-<o_p2><o_pl>:ni>
-<o_p3><o_sg>:m>
-<o_p3><o_pl>:ba>
-<o_cl1-2><o_sg>:m>
-<o_cl1-2><o_pl>:ba>
-<o_cl1-2a><o_sg>:m>
-<o_cl1-2a><o_pl>:ba>
-<o_cl3-4><o_sg>:wu>
-<o_cl3-4><o_pl>:yi>
-<o_cl5-6><o_sg>:li>
-<o_cl5-6><o_pl>:wa>
-<o_cl7-8><o_sg>:si>
-<o_cl7-8><o_pl>:zi>
-<o_cl9-10><o_sg>:yi>
-<o_cl9-10><o_pl>:zi>
-<o_cl11-10><o_sg>:lu>
-<o_cl11-10><o_pl>:zi>
-<o_cl14><o_sg>:bu>
-<o_cl15><o_sg>:ku>
-<o_cl17><o_sg>:ku>
+<obj><1sg>:ngi>
+<obj><1pl>:si>
+<obj><2sg>:ku>
+<obj><2pl>:ni>
+<obj><3sg>:m>
+<obj><3pl>:ba>
+<obj><c1>:m>
+<obj><c2>:ba>
+<obj><c1a>:m>
+<obj><c2a>:ba>
+<obj><c3>:wu>
+<obj><c4>:yi>
+<obj><c5>:li>
+<obj><c6>:wa>
+<obj><c7>:si>
+<obj><c8>:zi>
+<obj><c9>:yi>
+<obj><c10>:zi>
+<obj><c11>:lu>
+<obj><c14>:bu>
+<obj><c15>:ku>
+<obj><c17>:ku>
 
 LEXICON Tense(3)
 <pres><neg>:a> : :>i
@@ -229,7 +227,6 @@ LEXICON Tense(3)
 <past>: : :>e
 <past>: : :>ile #Dir/LR
 <pres>: : :>a
-<pres><neg>: : :>i
 <rm_past><cont>:nga> : :>a
 <rm_past><perf>:nga> : :>e
 <rm_past>: :a> :>a
@@ -406,6 +403,10 @@ ningana # "quite a few"
 
 LEXICON AdvRoot
 phansi #below
+phezulu #above
+mhlawumbe #maybe
+phezu #on top
+ngeke #never
 
 #ALIAS AdjRoot AdvRoot
 
@@ -2541,7 +2542,7 @@ tel
 telez
 tet
 tez
-th
+thi
 thaf
 thak
 thakas

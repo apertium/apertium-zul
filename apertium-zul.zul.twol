@@ -6,7 +6,13 @@ Alphabet
 
  %{u%}:0 %{a%}:a %{n%}:n 
  %{u%}:u
- %{u%}:w
+ %{u%}:a
+ %{w%}:0
+ %{w%}:w
+ %{y%}:0
+ %{y%}:y
+ %{k%}:k
+ %{k%}:0
  %>:0 ; 
 
 Sets 
@@ -20,11 +26,23 @@ CoalVow = a i o u ;
 Loc = e i o u ;
 
 Rules 
+"Glide insertion before subject concord"
+%{w%}:w <=> :a %>: _ %>: ;
+
+"Y insertion before subject concord"
+%{y%}:y <=> :a %>: _ %>: ;
+
+"Class 1 and 1a change to ka in negative"
+%{k%}:k <=> :a %>: _ %>: ;
+
+"u changes to a after k"
+%{u%}:a <=> %{k%}:k _ %>: ;
+
 !"M turns into n before a nasal glide cluster"
 !m%{u%}:0 <=> _ %> :n :y ;"
 
 "U turns into w before the vowel a"
-%{u%}:w <=> _ %>: :a ;
+%{u%}:0 <=> %{w%}:w _ %>: :a ;
 
 !"two consecutive n characters condense into one"
 !nn:n <=> : ;
@@ -41,7 +59,7 @@ Rules
 !"assimilation"
 !%{n%}:m <=> _ %>: :p ; 
 
-!"Coalescence the a before a vowel is deleted"
+!"Coalescence 1 the a is deleted from the prefixing morpheme when before a vowel"
 !a:0 <=> _ %>: CoalVow: ;
 
 !"Coalescence 2 the remaining i or u vowel raises or lowers after a is deleted"
