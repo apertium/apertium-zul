@@ -174,7 +174,7 @@ LEXICON SubjConcord
 <subj><1pl>:si>
 <subj><2sg>:{w}u>
 <subj><2pl>:ni>
-<subj><3sg>:{w}{u}>
+<subj><3sg>:{w}u>
 <subj><3pl>:ba>
 <subj><c1>:{k}{u}>
 <subj><c2>:ba>
@@ -190,8 +190,8 @@ LEXICON SubjConcord
 <subj><c10>:zi>
 <subj><c11>:lu>
 <subj><c14>:bu>
-<subj><c15>:k{u}>
-<subj><c17>:k{u}>
+<subj><c15>:ku>
+<subj><c17>:ku>
 
 LEXICON ObjConcord
 <obj><1sg>:ngi>

@@ -2,9 +2,11 @@ Alphabet
 
  a b c d e f g h i j k l m n o p q r s t u v w x y z 
 
- i:e u:o u:w m:0
+ a:0
 
- %{u%}:0 %{a%}:a %{n%}:n 
+ %{u%}:0 
+ %{a%}:a 
+ %{n%}:n 
  %{u%}:u
  %{u%}:a
  %{w%}:0
@@ -26,23 +28,32 @@ CoalVow = a i o u ;
 Loc = e i o u ;
 
 Rules 
-"Glide insertion before subject concord"
-%{w%}:w <=> :a %>: _ %>: ;
 
-"Y insertion before subject concord"
-%{y%}:y <=> :a %>: _ %>: ;
-
-"Class 1 and 1a change to ka in negative"
-%{k%}:k <=> :a %>: _ %>: ;
-
-"u changes to a after k"
+"After archiphoneme k is realized the subsequent u should change to a"
 %{u%}:a <=> %{k%}:k _ %>: ;
-
-!"M turns into n before a nasal glide cluster"
-!m%{u%}:0 <=> _ %> :n :y ;"
 
 "U turns into w before the vowel a"
 %{u%}:0 <=> %{w%}:w _ %>: :a ;
+
+!"Coalescence 1 the a is deleted from the prefixing morpheme when before a vowel"
+!a:0 <=> _ %>: CoalVow: ;
+
+!"Coalescence 2 the remaining i or u vowel raises or lowers after a is deleted"
+!vx:vy <=> a:0 %>: _ ;
+!        where vx in ( i u )
+!              vy in ( e o )
+!        matched
+!;
+
+!"the vowel following an e is deleted"
+!Vx:0 <=>  e: %>: _ ;
+!        where Vx in ( i o u ) ;
+
+!"Do not add a to verb roots that end in i"
+!a:0 <=> :i %> _ ;
+
+!"M turns into n before a nasal glide cluster"
+!m%{u%}:0 <=> _ %> :n :y ;"
 
 !"two consecutive n characters condense into one"
 !nn:n <=> : ;
@@ -59,16 +70,3 @@ Rules
 !"assimilation"
 !%{n%}:m <=> _ %>: :p ; 
 
-!"Coalescence 1 the a is deleted from the prefixing morpheme when before a vowel"
-!a:0 <=> _ %>: CoalVow: ;
-
-!"Coalescence 2 the remaining i or u vowel raises or lowers after a is deleted"
-!vx:vy <=> a:0 %>: _ ;
-!	where vx in ( i u )
-!	      vy in ( e o )
-!        matched 
-!;
-
-!"the vowel following an e is deleted"
-!Vx:0 <=>  e: %>: _ ;
-!	where Vx in ( i o u ) ;
