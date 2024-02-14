@@ -47,56 +47,56 @@ PATTERN Noun
 (:CConj? :NounPrefix NounRoot [<n>:] NounPrefix:)[^[c1-2,c3-4,c5-6,c7-8,c9-10,c11,c14,c15,c17]]
 
 LEXICON CConj
-<cconj>:na>
+na<cconj>:na>
 
 LEXICON NounPrefix
-<cl1-2><sg>:um{u}>[c1-2]
-<cl1-2><pl>:ab{a}>[c1-2]
-<cl3-4><sg>:um{u}>[c3-4]
-<cl3-4><pl>:imi>[c3-4]
-<cl5-6><sg>:i>[c5-6]
-<cl5-6><pl>:ama>[c5-6]
-<cl7-8><sg>:isi>[c7-8]
-<cl7-8><pl>:izi>[c7-8]
-<cl9-10><sg>:i{n}>[c9-10]
-<cl9-10><pl>:izi{n}[c9-10]
-<cl11><sg>:u>[c11]
-<cl14><sg>:ubu>[c14]
-<cl15><sg>:uku>[c15]
-<cl17><sg>:uku>[c17]
+um<cl1_2><sg>:um{u}>[c1-2]
+ab<cl1_2><pl>:ab{a}>[c1-2]
+um<cl3_4><sg>:um{u}>[c3-4]
+imi<cl3_4><pl>:imi>[c3-4]
+i<cl5_6><sg>:i>[c5-6]
+ama<cl5_6><pl>:ama>[c5-6]
+isi<cl7_8><sg>:isi>[c7-8]
+izi<cl7_8><pl>:izi>[c7-8]
+i<cl9_10><sg>:i{n}>[c9-10]
+izi<cl9_10><pl>:izi{n}[c9-10]
+u<cl11_10><sg>:u>[c11]
+ubu<cl14><sp>:ubu>[c14]
+uku<cl15><sp>:uku>[c15]
+uku<cl17><sp>:uku>[c17]
 
 PATTERN Copula
 Cop Noun
 
 LEXICON Cop
-<cop>:y>
-<cop>:ng> 
+y<cop>:y>
+ng<cop>:ng> 
 
 PATTERN Location
 Loc Noun
 
 LEXICON Loc
-<loc>:kwa>
-<loc>:e>
+kwa<loc>:kwa>
+e<loc>:e>
 
 PATTERN Adjective
 AdjPrefix AdjRoot
 
 LEXICON AdjPrefix
-<cl1-2><sg>:omu>
-<cl1-2><pl>:aba>
-<cl3-4><sg>:omu>
-<cl3-4><pl>:emi>
-<cl5-6><sg>:eli>
-<cl5-6><pl>:ama>
-<cl7-8><sg>:esi>
-<cl-8><pl>:ezi{n}>
-<cl9-10><sg>:en>
-<cl9-10><pl>:ezi{n}>
-<cl11><sg>:olu>
-<cl14><sg>:obu>
-<cl15><sg>:oku>
-<cl17><sg>:oku>
+omu<cl1_2><sg>:omu>
+aba<cl1_2><pl>:aba>
+omu<cl3_4><sg>:omu>
+emi<cl3_4><pl>:emi>
+eli<cl5_6><sg>:eli>
+ama<cl5_6><pl>:ama>
+esi<cl7_8><sg>:esi>
+ezi<cl7_8><pl>:ezi{n}>
+en<cl9_10><sg>:en>
+ezi<cl9_10><pl>:ezi{n}>
+olu<cl11_10><sg>:olu>
+obu<cl14><sp>:obu>
+oku<cl15><sp>:oku>
+oku<cl17><sp>:oku>
 
 #PATTERN Determiner
 #Possessive
@@ -120,48 +120,48 @@ PATTERN Quant
 NAgr QuantRoot
 
 LEXICON NAgr
-<pers><1sg>:nge>
-<pers><1pl>:so>
-<pers><2sg>:we>
-<pers><2pl>:no>
-<pers><3sg>:ye>
-<pers><3pl>:bo>
-<pers><c1>:ye>
-<pers><c2>:bo>
-<pers><c1a>:ye>
-<pers><c2a>:bo>
-<pers><c3>:wo>
-<pers><c4>:yo>
-<pers><c5>:lo>
-<pers><c6>:wo>
-<pers><c7>:so>
-<pers><c8>:zo>
-<pers><c9>:yo>
-<pers><c10>:zo>
-<pers><c11>:lo>
-<pers><c14>:bo>
-<pers><c15>:ko>
-<pers><c17>:ko>
+nge<pers><p1><sg>:nge>
+so<pers><p1><pl>:so>
+we<pers><p2><sg>:we>
+no<pers><p2><pl>:no>
+ye<pers><p3><sg>:ye>
+bo<pers><p3><pl>:bo>
+ye<pers><cl1><sg>:ye>
+bo<pers><cl2>:bo>
+ye<pers><cl1a>:ye>
+bo<pers><cl2a>:bo>
+wo<pers><cl3>:wo>
+yo<pers><cl4>:yo>
+lo<pers><cl5>:lo>
+wo<pers><cl6>:wo>
+so<pers><cl7>:so>
+zo<pers><cl8>:zo>
+yo<pers><cl9>:yo>
+zo<pers><cl10>:zo>
+lo<pers><cl11>:lo>
+bo<pers><cl14>:bo>
+ko<pers><cl15>:ko>
+ko<pers><cl17>:ko>
 
 LEXICON ObjAgr
-<osg_p3>:wa>
-<opl_p3>:ba>
-<osg_c1>:wa>
-<opl_c2>:ba>
-<osg_c1a>:wa>
-<opl_c2a>:ba>
-<osg_c3>:wa>
-<opl_c4>:ya>
-<osg_c5>:la>
-<opl_c6>:a>
-<osg_c7>:sa>
-<opl_c8>:za>
-<osg_c9>:ya>
-<opl_c10>:za>
-<osg_c11>:lwa>
-<osg_c14>:ba>
-<opl_c15>:kwa>
-<osg_c17>:kwa>
+wa<oa_sg3>:wa>
+ba<oa_pl3>:ba>
+wa<oa_sg1_2>:wa>
+ba<oa_pl1_2>:ba>
+wa<oa_sg1a_2a>:wa>
+ba<oa_pl1a_2a>:ba>
+wa<oa_sg3_4>:wa>
+ya<oa_pl3_4>:ya>
+la<oa_sg5_6>:la>
+a<oa_pl5_6>:a>
+sa<oa_sg7_8>:sa>
+za<oa_pl7_8>:za>
+ya<oa_sg9_10>:ya>
+za<oa_pl9_10>:za>
+lwa<oa_sg11_10>:lwa>
+ba<oa_sp14>:ba>
+kwa<oa_sp15>:kwa>
+kwa<oa_sp17>:kwa>
 
 PATTERN Verb
 TensedVerb
@@ -170,52 +170,52 @@ PATTERN TensedVerb
 :Tense(1) SubjConcord Tense(2) Mood? ObjConcord? VerbRoot [<v>:] Tense(1): :Tense(3)
 
 LEXICON SubjConcord
-<subj><1sg>:ngi>
-<subj><1pl>:si>
-<subj><2sg>:{w}u>
-<subj><2pl>:ni>
-<subj><3sg>:{w}u>
-<subj><3pl>:ba>
-<subj><c1>:{k}{u}>
-<subj><c2>:ba>
-<subj><c1a>:{k}{u}>
-<subj><c2a>:o>
-<subj><c3>:{w}u>
-<subj><c4>:{y}i>
-<subj><c5>:li>
-<subj><c6>:a>
-<subj><c7>:si>
-<subj><c8>:zi>
-<subj><c9>:{y}i>
-<subj><c10>:zi>
-<subj><c11>:lu>
-<subj><c14>:bu>
-<subj><c15>:ku>
-<subj><c17>:ku>
+ngi<s_sg1>:ngi>
+si<s_pl1>:si>
+u<s_sg2>:{w}u>
+ni<s_pl2>:ni>
+u<s_sg3>:{w}u>
+ba<s_pl3>:ba>
+u<s_sg1_2>:{k}{u}>
+ba<s_pl1_2>:ba>
+u<s_sg1a_2a>:{k}{u}>
+o<s_pl1a_2a>:o>
+u<s_sg3_4>:{w}u>
+i<s_pl2_4>:{y}i>
+li<s_sg5_6>:li>
+a<s_pl5_6>:a>
+si<s_sg7_8>:si>
+zi<s_pl7_8>:zi>
+i<s_sg9-10>:{y}i>
+zi<s_pl9_10>:zi>
+lu<s_sg11_10>:lu>
+bu<s_sp14>:bu>
+ku<s_sp15>:ku>
+ku<s_sp17>:ku>
 
 LEXICON ObjConcord
-<obj><1sg>:ngi>
-<obj><1pl>:si>
-<obj><2sg>:ku>
-<obj><2pl>:ni>
-<obj><3sg>:m>
-<obj><3pl>:ba>
-<obj><c1>:m>
-<obj><c2>:ba>
-<obj><c1a>:m>
-<obj><c2a>:ba>
-<obj><c3>:wu>
-<obj><c4>:yi>
-<obj><c5>:li>
-<obj><c6>:wa>
-<obj><c7>:si>
-<obj><c8>:zi>
-<obj><c9>:yi>
-<obj><c10>:zi>
-<obj><c11>:lu>
-<obj><c14>:bu>
-<obj><c15>:ku>
-<obj><c17>:ku>
+ngi<o_sg1>:ngi>
+si<o_pl1>:si>
+ku<o_sg2>:ku>
+ni<o_pl2>:ni>
+m<o_sg3>:m>
+ba<o_pl3>:ba>
+m<o_sg><cl1_2>:m>
+ba<o_pl><cl1_2>:ba>
+m<o_sg><cl1a_2a>:m>
+ba<o_pl><cl1a_2a>:ba>
+wu<o_sg><cl3_4>:wu>
+yi<o_pl><cl3_4>:yi>
+li<o_sg><cl5_6>:li>
+wa<o_pl><cl5_6>:wa>
+si<o_sg><cl7_8>:si>
+zi<o_pl><cl7_8>:zi>
+yi<o_sg><cl9_10>:yi>
+zi<o_pl><cl9_10>:zi>
+lu<o_sg><cl11_10>:lu>
+bu<o_sp><cl14>:bu>
+ku<o_sp><cl15>:ku>
+ku<o_sp><cl17>:ku>
 
 LEXICON Tense(3)
 <pres><neg>:a> : :>i
@@ -232,98 +232,98 @@ LEXICON Tense(3)
 <rm_past>: :a> :>a
 
 LEXICON Mood
-<pot>:nga>
-<foc>:ya>
-<participle><neg>:nga>
-<subjn><neg>:nga>
-<past><cont><neg>:nga>
-<fut>:zo>
+nga<prs>:nga>
+ya<foc>:ya>
+nga<participle><neg>:nga>
+nga<pres><neg>:nga>
+nga<past><cont><neg>:nga>
+zo<fut>:zo>
 
 PATTERN DemPronoun
 ProAgr Distance
 
 LEXICON ProAgr
-<pers><c1>:lo>
-<pers><c1a>:lo>
-<pers><c2>:la>
-<pers><c2a>:la>
-<pers><c3>:lo>
-<pers><c4>:le>
-<pers><c5>:le>
-<pers><c6>:la>
-<pers><c7>:le>
-<pers><c8>:le>
-<pers><c9>:le>
-<pers><c10>:le>
-<pers><c11>:lo>
-<pers><c14>:lo>
-<pers><c15>:lo>
-<pers><c17>:lo>
+lo<cl1>:lo>
+lo<cl1a>:lo>
+la<cl2>:la>
+la<cl2a>:la>
+lo<cl3>:lo>
+le<cl4>:le>
+le<cl5>:le>
+la<cl6>:la>
+le<cl7>:le>
+le<cl8>:le>
+le<cl9>:le>
+le<cl10>:le>
+lo<cl11>:lo>
+lo<cl14>:lo>
+lo<cl15>:lo>
+lo<cl17>:lo>
 
 LEXICON Distance
-<dist><0><c1>: #"this"
-<dist><0><c1a>: #"this"
-<dist><0><c2>:>ba #"this"
-<dist><0><c2a>:>ba #"this"
-<dist><0><c3>: #"this"
-<dist><0><c4>: #"this"
-<dist><0><c5>:>li #"this"
-<dist><0><c6>: #"this"
-<dist><0><c7>:>si #"this"
-<dist><0><c8>:>zi #"this"
-<dist><0><c9>: #"this"
-<dist><0><c10>:>zi #"this"
-<dist><0><c11>:>lu #"this"
-<dist><0><c14>:>bu #"this"
-<dist><0><c15>:>khu #"this"
-<dist><0><c17>:>khu #"this"
-<dist><1><c1>:>wo #"that"
-<dist><1><c1a>:>wo #"that"
-<dist><1><c2>:>bo #"that"
-<dist><1><c2a>:>bo #"that"
-<dist><1><c3>:>wo #"that"
-<dist><1><c4>:>yo #"that"
-<dist><1><c5>:>lo #"that"
-<dist><1><c6>:>wo #"that"
-<dist><1><c7>:>so #"that"
-<dist><1><c8>:>zo #"that"
-<dist><1><c9>:>yo #"that"
-<dist><1><c10>:>zo #"that"
-<dist><1><c11>:>lo #"that"
-<dist><1><c14>:>bo #"that"
-<dist><1><c15>:>kho #"that"
-<dist><1><c17>:>kho #"that"
+<prn><dst><0><cl1>: #"this"
+<prn><dst><0><cl1a>: #"this"
+ba<prn><dst><0><cl2>:>ba #"this"
+ba<prn><dst><0><cl2a>:>ba #"this"
+<prn><dst><0><cl3>: #"this"
+<prn><dst><0><cl4>: #"this"
+li<prn><dst><0><cl5>:>li #"this"
+<prn><dst><0><cl6>: #"this"
+si<prn><dst><0><cl7>:>si #"this"
+zi<prn><dst><0><cl8>:>zi #"this"
+<prn><dst><0><cl9>: #"this"
+zi<prn><dst><0><cl10>:>zi #"this"
+lu<prn><dst><0><cl11>:>lu #"this"
+bu<prn><dst><0><cl14>:>bu #"this"
+khu<prn><dst><0><cl15>:>khu #"this"
+khu<prn><dst><0><cl17>:>khu #"this"
+wo<prn><dst><1><cl1><sg>:>wo #"that"
+wo<prn><dst><1><cl1a>:>wo #"that"
+bo<prn><dst><1><cl2>:>bo #"that"
+bo<prn><dst><1><cl2a>:>bo #"that"
+wo<prn><dst><1><cl3>:>wo #"that"
+yo<prn><dst><1><cl4>:>yo #"that"
+lo<prn><dst><1><cl5>:>lo #"that"
+wo<prn><dst><1><cl6>:>wo #"that"
+so<prn><dst><1><cl7>:>so #"that"
+zo<prn><dst><1><cl8>:>zo #"that"
+yo<prn><dst><1><cl9>:>yo #"that"
+zo<prn><dst><1><cl10>:>zo #"that"
+lo<prn><dst><1><cl11>:>lo #"that"
+bo<prn><dst><1><cl14>:>bo #"that"
+kho<prn><dst><1><cl15>:>kho #"that"
+kho<prn><dst><1><cl17>:>kho #"that"
 
 
 PATTERN PersPronoun
 PersPro Demo
 
 LEXICON PersPro
-<pers><1sg>:mi>
-<pers><1pl>:thi>
-<pers><2sg>:we>
-<pers><2pl>:ni>
-<pers><3sg>:ye>
-<pers><3pl>:bo>
-<pers><c1>:ye>
-<pers><c2>:bo>
-<pers><c1a>:ye>
-<pers><c2a>:bo>
-<pers><c3>:wo>
-<pers><c4>:yo>
-<pers><c5>:lo>
-<pers><c6>:wo>
-<pers><c7>:so>
-<pers><c8>:zo>
-<pers><c9>:yo>
-<pers><c10>:zo>
-<pers><c11>:lo>
-<pers><c14>:bo>
-<pers><c15>:kho>
-<pers><c17>:kho>
+mi<px1sg>:mi>
+thi<px1pl>:thi>
+we<px2sg>:we>
+ni<px2pl>:ni>
+ye<px3sg>:ye>
+bo<px3pl>:bo>
+ye<px1_2sg>:ye>
+bo<px1_2pl>:bo>
+ye<px1a_2asg>:ye>
+bo<px1a_2apl>:bo>
+wo<px3_4sg>:wo>
+yo<px3_4pl>:yo>
+lo<px5_6sg>:lo>
+wo<px5_6pl>:wo>
+so<px7_8sg>:so>
+zo<px7_8pl>:zo>
+yo<px9_10sg>:yo>
+zo<px9_10pl>:zo>
+lo<px11_10sg>:lo>
+bo<px14sp>:bo>
+kho<px15sp>:kho>
+kho<px17sp>:kho>
 
 LEXICON Demo
-<demo_all>:>na
+na<prn><dem>:na
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
